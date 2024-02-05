@@ -51,7 +51,7 @@ class AuthController extends Controller
     {
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
-            return redirect()->route('form');
+            return redirect()->route('index');
         }
         $user = User::where('email', $request->email)->first();
         if (!$user) {

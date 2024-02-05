@@ -11,13 +11,9 @@ class UrlController extends Controller
 {
     public function index()
     {
-        return view('welcome');
-    }
-
-    public function form()
-    {
         return view('index');
     }
+
 
     public function store(Request $request)
     {

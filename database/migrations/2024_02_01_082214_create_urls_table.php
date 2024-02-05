@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('long_url');
             $table->string('short_url')->unique();
+            $table->bigInteger('clicks')->default(0);
             $table->unsignedBigInteger('user_id')->nullable();
             $table->timestamps();
         });
