@@ -34,7 +34,7 @@ class AuthController extends Controller
             $user->save();
             Auth::login($user);
 
-            return redirect()->route('form')->with('success', 'Register Succed');
+            return redirect()->route('login')->with('success', 'Register Succed');
         
 
     }
